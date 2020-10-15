@@ -1,0 +1,54 @@
+*{margin:0;}
+
+:root {
+	--color:;
+	--text-color:;
+	--back1:pink;
+	--back2:lightblue;
+	--nav-height:3em;
+	
+	--wlcm-height:100vh;
+	--wlcm-card-height:30vh;
+}
+
+#nav-wrapper {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:var(--nav-height);
+	background-color:var(--back1);
+}
+
+ul {
+	display:flex;
+	justify-content:flex-end;
+}
+
+ul li {
+	text-decoration:none;
+	list-style:none;
+	padding:.5em;
+}
+
+#welcome-wrapper{
+	margin-top:var(--nav-height);
+	height:var(--wlcm-height);
+	background-color:var(--back2);
+}
+
+#welcome {
+	width:40vw;
+	height:var(--wlcm-card-height);
+	margin:auto;
+	position:relative;
+	top:calc(calc(var(--wlcm-height) / 2 ) - calc(var(--wlcm-card-height) / 2));
+	background-color:blue;
+	border-radius:5px;
+	text-align:center;
+	padding:1em;
+}
+
+@media (max-width:800px) {
+	
+}
