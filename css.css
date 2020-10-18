@@ -3,9 +3,9 @@
 :root {
 	--color:#d2ddd8; /* silver */
 	--back0:#000000; /* Black */
-	--back1:#641216; /* maroon */
-	--back2:#f18e26; /* goldenrod */
-	--back3:#1d7990; /* teal */
+	--back1:rgb(134,3,29); /* Dark Red */
+	--back2:rgb(220,101,15); /* goldenrod */
+	--back3:rgb(250,231,148); /* gold */
 	--nav-height:3em;
 	
 	--wlcm-height:100vh;
@@ -23,7 +23,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {font-size:40px;}
-h2 {font-size:30px;}
+h2 {
+	font-size:30px;
+	padding:.5em;
+}
 
 p {
 	margin-top:1em;
@@ -58,6 +61,7 @@ a {
 	color:var(--back2);
 	text-decoration:none;
 }
+a:hover{color:var(--back3);}
 
 ul li a {color:var(--color);}
 
@@ -65,6 +69,7 @@ ul li a {color:var(--color);}
 	margin-top:var(--nav-height);
 	height:var(--wlcm-height);
 	background-color:var(--back0);
+	background-image:url(http://sf.co.ua/14/01/wallpaper-757271.jpg);
 }
 
 #welcome {
@@ -76,12 +81,40 @@ ul li a {color:var(--color);}
 	position:relative;
 	top:calc(calc(var(--wlcm-height) / 2) - var(--wlcm-card-height));
 	color:var(--back0);
-	background-color:rgba(241,142,38,.75);
+	background-color:rgba(250,231,148,.60);
 	border-radius:10px;
 	text-align:center;
 	justify-content:center;
 	padding:1em;
 	padding:2em;
+}
+
+/* ----- Begin Project Section Style ----- */
+#projects-wrapper{
+	padding:2em;
+}
+
+.project-row {
+	display:flex;
+	justify-content:space-evenly;
+	margin:1em;
+}
+
+.project-tile {
+	width:40vw;
+	height:50vh;
+	padding:1em;
+	border:1px;
+	border-style:solid;
+	border-color:var(--back2);
+	text-align:center;
+	border-radius:.5em;
+}
+
+.project-tile iframe {
+	width:100%;
+	height:85%;
+	border:none;
 }
 
 @media (max-width:800px) {
