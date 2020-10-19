@@ -7,10 +7,9 @@
 	--back2:rgb(220,101,15); /* goldenrod */
 	--back3:rgb(250,231,148); /* gold */
 	--nav-height:3em;
-	
-	--wlcm-height:100vh;
-	--wlcm-card-height:25vh;
 }
+
+html{scroll-padding-top:3em;}
 
 body {
 	color:var(--color);
@@ -20,19 +19,24 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Merriweather', serif;
+	padding:.5;
 }
 
 h1 {font-size:40px;}
-h2 {
-	font-size:30px;
-	padding:.5em;
-}
+h2 {font-size:30px;}
+h3 {font-size:26px;}
 
 p {
 	margin-top:1em;
 	font-size:20px;
 	line-height:1em;
 }
+
+a {
+	color:var(--back2);
+	text-decoration:none;
+}
+a:hover{color:var(--back3);}
 
 #nav-wrapper {
 	position:fixed;
@@ -57,29 +61,28 @@ ul li {
 	font-weight:600;
 }
 
-a {
-	color:var(--back2);
-	text-decoration:none;
-}
-a:hover{color:var(--back3);}
-
 ul li a {color:var(--color);}
 
-#welcome-wrapper{
+
+/* ----- Begin Welcome Section Style ----- */
+#welcome-section{
 	margin-top:var(--nav-height);
-	height:var(--wlcm-height);
+	height:100vh;
 	background-color:var(--back0);
 	background-image:url(http://sf.co.ua/14/01/wallpaper-757271.jpg);
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
 }
 
 #welcome {
 	display:flex;
 	flex-direction:column;
 	width:40vw;
-	height:var(--wlcm-card-height);
+	height:25vh;
 	margin:auto;
 	position:relative;
-	top:calc(calc(var(--wlcm-height) / 2) - var(--wlcm-card-height));
+	top:-2em;
 	color:var(--back0);
 	background-color:rgba(250,231,148,.60);
 	border-radius:10px;
@@ -113,8 +116,39 @@ ul li a {color:var(--color);}
 
 .project-tile iframe {
 	width:100%;
-	height:85%;
+	height:90%;
 	border:none;
+}
+
+/* ----- Begin Contact Section Style ----- */
+#contact-wrapper {
+	height:15em;
+}
+
+.contact-link, .contact-link img {
+	height:2em;
+	margin:.5em;
+}
+
+.contact-link img {
+	position:relative;
+	top:1em;
+}
+
+#contact ul {
+	justify-content:space-evenly;
+}
+
+/* ----- Begin Footer Section Style ----- */
+
+#footer-wrapper {
+	height:5em;
+	color:var(--back0);
+	background-color:var(--back2);
+	display:flex;
+	align-items:center;
+	justify-content:flex-end;
+	padding:1em;
 }
 
 @media (max-width:800px) {
